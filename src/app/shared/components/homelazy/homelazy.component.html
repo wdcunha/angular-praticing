@@ -1,1 +1,11 @@
-<p>homelazy works!</p>
+<h2>Homelazy Page!</h2>
+
+<a [routerLink]="['/lazy/header']">
+  <li>Header</li>
+</a>
+<a [routerLink]="['/lazy/footer']">
+  <li>Footer</li>
+</a>
+
+<router-outlet></router-outlet> <!-- sem essa tag não é mostrado o children qdo chamar na url-->
+

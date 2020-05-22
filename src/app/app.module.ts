@@ -12,6 +12,7 @@ import {NgIfNgForComponent} from './shared/components/ng-if-ng-for/ng-if-ng-for.
 import {CrudComponent} from './shared/components/crud/crud.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {LazyloadingModule} from './modules/lazyloading/lazyloading.module';
+import { OutputInputComponent } from './shared/components/output-input/output-input.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {LazyloadingModule} from './modules/lazyloading/lazyloading.module';
     ShowPageComponent,
     SegundoCpComponent,
     NgIfNgForComponent,
-    CrudComponent
+    CrudComponent,
+    OutputInputComponent
   ],
   imports: [
     BrowserModule,

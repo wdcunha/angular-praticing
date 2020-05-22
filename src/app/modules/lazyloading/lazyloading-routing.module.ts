@@ -8,7 +8,17 @@ import {HomelazyComponent} from '../../shared/components/homelazy/homelazy.compo
 const routes: Routes = [
   {
     path: '',
-    component: HomelazyComponent
+    component: HomelazyComponent,
+    children: [
+      {
+        path: 'header',
+        component: HeaderComponent
+      },
+      {
+        path: 'footer',
+        component: FooterComponent
+      }
+    ]
   }
 ];
 
@@ -18,3 +28,8 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class LazyloadingRoutingModule { }
+
+/**
+ * Curso Angular 8: Lazy Loading e Modules - #06
+ * https://www.youtube.com/watch?v=8JxN-gYdZgk&list=PL4iwH9RF8xHnMnKewOLjDvTHzTmyxJNHF&index=6
+ */

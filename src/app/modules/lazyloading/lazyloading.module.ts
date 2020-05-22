@@ -5,7 +5,7 @@ import { LazyloadingRoutingModule } from './lazyloading-routing.module';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [], // as declarations podem ser feitas aqui ao invés de fazer no LazyloadingRoutingModule
   imports: [
     CommonModule,
     LazyloadingRoutingModule

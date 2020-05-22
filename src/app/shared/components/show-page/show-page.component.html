@@ -1,0 +1,9 @@
+<div class="cards">
+  <!-- se não usar o colchetes (que indica binding), não precisa usar plicas -->
+  <cp-post-card
+    *ngFor="let post of posts"
+    [post]="post"
+    (cardClicked)="cardClicado($event)"
+  ></cp-post-card>
+</div>
+

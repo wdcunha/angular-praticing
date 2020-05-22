@@ -1,0 +1,12 @@
+<!-- tag pre formata os dados antes de apresentar e no caso abaixo,
+mostra o json quebrando por conjunto de dados
+<pre>
+  {{ images | json }}
+</pre>
+-->
+
+<div *ngFor="let i of images">
+  <h1>{{ i.title }}</h1>
+  <img [attr.src]="i.url">
+  <p>{{ i.url }}</p>
+</div>

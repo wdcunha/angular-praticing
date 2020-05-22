@@ -1,0 +1,26 @@
+
+.card {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 250px;
+  overflow: hidden;
+  text-align: center;
+
+  .card-header {
+    border-bottom: 1px solid black;
+    width: 100%;
+    font-size: 18px;
+    padding: 10px 0;
+  }
+
+  .card-body {
+    padding: 10px 0;
+  }
+
+  .card-footer {
+    border-top: 1px solid black;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,95 @@
+
+
+
+{{'(input)'}}<input type="text" (input)="this.numero = $event.target.value">
+{{numero}}
+
+{{'(change)'}}<input type="text" (change)="this.number2 = $event.target.value">
+{{number2}}
+
+{{'(blur)'}}<input type="text" (blur)="this.number3 = $event.target.value">
+{{number3}}
+
+{{'(via método)'}}<input type="text" (input)="obterNumero($event.target.value)">
+{{number4}}
+<hr>
+<div class="valor" [class.negative]="valor < 0">
+  {{ valor }} <br>
+</div>
+
+<div>
+  <p>
+    <label *ngIf="valor < 0">O número tem que ser positivo</label>
+  </p>
+</div>
+
+<div class="form">
+  Nome: <input type="text" name="nome" id="nome" [(ngModel)]="model.nome"> <br>
+  Idade: <input type="text" name="idade" id="idade" [(ngModel)]="model.idade"> <br>
+  Telefone: <input type="text" name="telefone" id="telefone" [(ngModel)]="model.telefone"> <br>
+  <input type="radio" name="sexo" id="sexo" value="Feminino" [(ngModel)]="model.sexo"> Feminino &nbsp;&nbsp;
+  <input type="radio" name="sexo" id="sexo" value="Masculino" [(ngModel)]="model.sexo"> Masculino <br>
+  <button (click)="adicionaPessoa()">Adicionar</button>
+  <p>
+    {{ model | json }}
+  </p>
+</div>
+
+<div>
+  <br>
+  <div class="person-card" *ngFor="let ps of pessoas">
+    <label>Nome: </label> {{ps.nome}} <br>
+    <label>Idade: </label> {{ps.idade}} <br>
+    <label>Telefone: </label> {{ps.telefone}} <br>
+    <label>Sexo: </label> {{ps.sexo}} <br>
+  </div>
+</div>
+
+<div class="square">here</div>
+
+<h2>Responsive Four Column Layout with Flex</h2>
+<p><strong>Resize the browser window to see the responsive effect.</strong> On screens that are 992px wide or less, the
+  columns will resize from four columns to two columns. On screens that are 600px wide or less, the columns will stack
+  on top of each other instead of next to eachother.</p>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Column 1</h2>
+    <p>Some text..</p>
+  </div>
+
+  <div class="column" style="background-color:#bbb;">
+    <h2>Column 2</h2>
+    <p>Some text..</p>
+  </div>
+
+  <div class="column" style="background-color:#ccc;">
+    <h2>Column 3</h2>
+    <p>Some text..</p>
+  </div>
+
+  <div class="column" style="background-color:#ddd;">
+    <h2>Column 4</h2>
+    <p>Some text..</p>
+  </div>
+</div>
+
+
+<div class="container">
+
+  <div>div sem classe</div>
+
+  <p>qual o tamanho?</p>
+
+  <p>Texto</p>
+
+  <p>Texto</p>
+
+  <p>parágrafo normal</p>
+
+  <p>acaba aqui!</p>
+
+  <blockquote>que cor tem?</blockquote>
+
+  <figure>tag de figura</figure>
+</div>

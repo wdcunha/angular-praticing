@@ -1,0 +1,135 @@
+
+.negative {
+  color: red;
+}
+
+.valor {
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+.person-card {
+  width: 210px;
+  margin: auto;
+  border: 1px solid black;
+  padding: 5px;
+  margin-bottom: 10px;
+
+  label {
+    display: inline-block;
+    min-width: 80px;
+    text-align: right;
+    padding-right: 10px;
+  }
+}
+
+.square {
+  margin: 3px;
+  background: red;
+  border-color: black;
+  width: 800px;
+  border-style: groove;
+  height: 300px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Container for flexboxes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create four equal columns */
+.column {
+  flex: 25%;
+  padding: 20px;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 50%;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .square {
+    background: blue;
+    border-style: hidden;
+    color: white;
+  }
+
+  .column:nth-last-child(2) {
+    color: deeppink;
+  }
+
+  .column:nth-last-child(3) {
+    display: none;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+
+.container > :nth-last-child(n+6) ~ * {
+  color: pink;
+  font-size: 50px;
+}
+
+p:nth-last-of-type(n+9),
+p:nth-last-of-type(n+9) ~ * {
+  background-color: blue;
+}
+
+p:nth-last-child(9):first-child {
+  background-color: deeppink;
+}
+
+p:nth-last-child(n+4) {
+  border-color: red;
+  border-style: groove;
+}
+
+p:nth-last-child(3):first-child,
+p:nth-last-child(3):first-child ~ p {
+  background-color: green;
+}
+
+.container:nth-last-child(2):first-child,
+.container:nth-last-child(2):first-child ~ figure {
+  color: green;
+}
+
+
+p-overlayPanel:nth-child(n+7) {
+  max-width: 480px !important;
+  flex-flow: wrap;
+}
+
+.ui-overlaypanel-content > .selected-filter-container:nth-last-child(n+7),
+.ui-overlaypanel-content > .selected-filter-container:nth-last-child(n+7) ~ .ui-overlaypanel-content {
+  color: #3db014;
+  max-width: 480px !important;
+  flex-flow: wrap;
+}
+
+/* On screens that are 1000px wide or less, the background color is blue */
+@media screen and (max-width: 1000px) {
+  .ui-overlaypanel-content {
+    max-width: 480px !important;
+    flex-flow: wrap;
+  }
+
+  .selected-filter-container {
+    display: block;
+  }
+
+  .selected-filter-container:nth-child(7)::before {
+    content: attr(data-text);
+  }
+}

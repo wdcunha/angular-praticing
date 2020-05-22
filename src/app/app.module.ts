@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 import {PostCardComponent} from './shared/components/post-card/post-card.component';
 import {RouterModule} from '@angular/router';
@@ -13,6 +13,8 @@ import {CrudComponent} from './shared/components/crud/crud.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {LazyloadingModule} from './modules/lazyloading/lazyloading.module';
 import { OutputInputComponent } from './shared/components/output-input/output-input.component';
+import { FilhoComponent } from './shared/components/output-input/filho/filho.component';
+import { FormComponent } from './shared/components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,14 @@ import { OutputInputComponent } from './shared/components/output-input/output-in
     SegundoCpComponent,
     NgIfNgForComponent,
     CrudComponent,
-    OutputInputComponent
+    OutputInputComponent,
+    FilhoComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     RouterModule,
     HttpClientModule,

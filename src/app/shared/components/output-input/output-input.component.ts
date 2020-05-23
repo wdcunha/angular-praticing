@@ -23,3 +23,4 @@ export class OutputInputComponent implements OnInit {
   }
 
 }
+

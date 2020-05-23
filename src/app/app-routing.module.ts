@@ -6,9 +6,10 @@ import {ShowPageComponent} from './shared/components/show-page/show-page.compone
 import {NgIfNgForComponent} from './shared/components/ng-if-ng-for/ng-if-ng-for.component';
 import {CrudComponent} from './shared/components/crud/crud.component';
 import {OutputInputComponent} from './shared/components/output-input/output-input.component';
+import {FormComponent} from './shared/components/form/form.component';
 
 const routes: Routes = [
-  { path: '', component: OutputInputComponent},
+  { path: '', component: FormComponent},
   {
     path: 'lazy',
     loadChildren: () =>

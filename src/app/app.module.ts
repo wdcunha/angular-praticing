@@ -15,6 +15,7 @@ import {LazyloadingModule} from './modules/lazyloading/lazyloading.module';
 import { OutputInputComponent } from './shared/components/output-input/output-input.component';
 import { FilhoComponent } from './shared/components/output-input/filho/filho.component';
 import { FormComponent } from './shared/components/form/form.component';
+import {NgbModule, NgbRating} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -34,10 +35,11 @@ import { FormComponent } from './shared/components/form/form.component';
     ReactiveFormsModule,
     AppRoutingModule,
     RouterModule,
+    NgbModule,
     HttpClientModule,
     LazyloadingModule
   ],
-  providers: [HttpClient],
+  providers: [HttpClient, NgbRating],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -4,9 +4,26 @@ import { FormGroup, FormControl} from '@angular/forms';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  styleUrls: ['./form.component.scss'],
+  styles: [`
+    .star {
+      font-size: 1.5rem;
+      color: #b0c4de;
+    }
+    .filled {
+      color: #1e90ff;
+    }
+    .bad {
+      color: #deb0b0;
+    }
+    .filled.bad {
+      color: #ff1e1e;
+    }
+  `]
 })
 export class FormComponent implements OnInit {
+
+  currentRate = 5;
 
   data: any;
   perfil = new FormGroup({

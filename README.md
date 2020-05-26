@@ -1,5 +1,10 @@
 # Angula9PrimeirosPassos
 
+## Json server
+
+Run `json-server --watch db.json` for start the json server in the folder assets, where the file is saved. You can see the data inside that file navigating to `http://localhost:3000/Employee`, then the content will be shown in the browser's page.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14.
 
 ## Development server

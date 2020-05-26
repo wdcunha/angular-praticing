@@ -12,11 +12,11 @@ import {NgIfNgForComponent} from './shared/components/ng-if-ng-for/ng-if-ng-for.
 import {CrudComponent} from './shared/components/crud/crud.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {LazyloadingModule} from './modules/lazyloading/lazyloading.module';
-import { OutputInputComponent } from './shared/components/output-input/output-input.component';
-import { FilhoComponent } from './shared/components/output-input/filho/filho.component';
-import { FormComponent } from './shared/components/form/form.component';
+import {OutputInputComponent} from './shared/components/output-input/output-input.component';
+import {FilhoComponent} from './shared/components/output-input/filho/filho.component';
+import {FormComponent} from './shared/components/form/form.component';
 import {NgbModule, NgbRating} from '@ng-bootstrap/ng-bootstrap';
-import { EmployeeModule } from './modules/employees/employee.module';
+import {EmployeeModule} from './modules/employees/employee.module';
 
 @NgModule({
   declarations: [

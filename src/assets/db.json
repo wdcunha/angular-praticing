@@ -1,0 +1,28 @@
+{
+  "Employee": [
+    {
+      "id": 1,
+      "firstName": "Raj",
+      "lastName": "Varma",
+      "designation": "Developer",
+      "contact": 7893454,
+      "address": "Pune"
+    },
+    {
+      "id": 2,
+      "firstName": "Rajesh",
+      "lastName": "Varma",
+      "designation": "Ux Designer",
+      "contact": 456789,
+      "address": "Mumbai"
+    },
+    {
+      "id": 3,
+      "firstName": "Something",
+      "lastName": "Better",
+      "designation": "No way",
+      "contact": "21234",
+      "address": "AnyPlace"
+    }
+  ]
+}

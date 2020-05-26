@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { EmployeeComponent } from '../../shared/employees/employee.component';
-import { EmployeesListComponent } from '../../shared/employees-list/employees-list.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {EmployeeComponent} from '../../shared/employees/employee.component';
+import {EmployeesListComponent} from '../../shared/employees-list/employees-list.component';
+import {EmployeeService} from '../../core/services/employee.service';
+import {FormsModule} from '@angular/forms';
 
 /**
  * Angular With Malik
@@ -16,7 +18,10 @@ import { EmployeesListComponent } from '../../shared/employees-list/employees-li
     EmployeesListComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    FormsModule
+  ],
+  providers: [EmployeeService]
 })
-export class EmployeeModule { }
+export class EmployeeModule {
+}

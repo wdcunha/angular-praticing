@@ -1,24 +1,8 @@
-<div>
-  <h2>
-    {{ title }}
-  </h2>
+<div class="container">
+  <div class="jumbotron mainTitle">
+    <h2 class="bigText">Angular CRUD</h2>
+    <h5>(and other functionalities)</h5>
+  </div>
 </div>
-
-<div>
-  <input type="text" #titleInput> <br>
-  <button
-    [title]="buttonTitle"
-    [style]="buttonStyle"
-    (click)="incrementaTitle(titleInput.value)">Ajusta o título
-  </button>
-  <p>
-    <img
-      [src]="imgSrc"
-      [style.width.%]="7"
-      [title]="'teste de título da imagem'"
-    >
-  </p>
-</div>
-
 <router-outlet></router-outlet>
 

@@ -2,6 +2,14 @@
 <br/>
 <div class="container-fluid"> <!-- pega a pagina inteira com fluid -->
   <div class="row">
+    <div class="col-md-6">
+      <app-employee></app-employee>
+    </div>
+    <div class="col-md-6">
+      <app-employees-list></app-employees-list>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-md-4 offset-md-4">
       <form [formGroup]="perfil"> <!-- define qual o grupo do formulário que tá utilizando conforme criado no ts -->
         <div class="form-group">

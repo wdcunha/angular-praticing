@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import {Post} from '../../../core/models/post';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-segundo-cp',
   templateUrl: './segundo-cp.component.html',
   styleUrls: ['./segundo-cp.component.scss']
 })
-export class SegundoCpComponent implements OnInit {
+export class SegundoCpComponent {
 
   valor = 10;
   numero: number;
@@ -14,7 +13,13 @@ export class SegundoCpComponent implements OnInit {
   number3: number;
   number4: number;
 
-  constructor() { }
+  title = 'Angular 9 - Primeiros Passos';
+
+  counter = 0;
+  buttonTitle = 'título do botão de teste';
+  imgSrc = 'https://cdn.arstechnica.net/wp-content/uploads/2016/02/5718897981_10faa45ac3_b-640x624.jpg';
+  imgWidth = 200;
+  buttonStyle = 'background: pink; padding: 30px; font-size: 20px';
 
   pessoas = [
     {
@@ -44,7 +49,9 @@ export class SegundoCpComponent implements OnInit {
     sexo: ''
   };
 
-  ngOnInit() {
+
+  incrementaTitle(value: string) {
+    this.title = value;
   }
 
   adicionaPessoa() {

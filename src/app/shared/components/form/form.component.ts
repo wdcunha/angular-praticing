@@ -21,7 +21,7 @@ import { FormGroup, FormControl} from '@angular/forms';
     }
   `]
 })
-export class FormComponent implements OnInit {
+export class FormComponent  {
 
   currentRate = 5;
 
@@ -34,9 +34,6 @@ export class FormComponent implements OnInit {
   });
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
   obter() {
     this.data = this.perfil.value;

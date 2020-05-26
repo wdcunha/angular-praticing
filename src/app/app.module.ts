@@ -16,6 +16,7 @@ import { OutputInputComponent } from './shared/components/output-input/output-in
 import { FilhoComponent } from './shared/components/output-input/filho/filho.component';
 import { FormComponent } from './shared/components/form/form.component';
 import {NgbModule, NgbRating} from '@ng-bootstrap/ng-bootstrap';
+import { EmployeeModule } from './modules/employees/employee.module';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {NgbModule, NgbRating} from '@ng-bootstrap/ng-bootstrap';
     RouterModule,
     NgbModule,
     HttpClientModule,
-    LazyloadingModule
+    LazyloadingModule,
+    EmployeeModule
   ],
   providers: [HttpClient, NgbRating],
   bootstrap: [AppComponent]

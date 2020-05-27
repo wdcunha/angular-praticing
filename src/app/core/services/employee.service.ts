@@ -10,6 +10,8 @@ const headerOption = {
 @Injectable()
 export class EmployeeService {
 
+  allEmployee: Employee[];
+
   jsonServerUrl = 'http://localhost:3000/Employee';
 
   currentEmployee: Employee = {
@@ -19,12 +21,16 @@ export class EmployeeService {
     designation: '',
     contact: null,
     address: ''
-  }
+  };
 
   constructor(private httpClient: HttpClient) { }
 
-  getAllEmployees(): Observable<Employee[]> {
-    return this.httpClient.get<Employee[]>(this.jsonServerUrl, headerOption);
+  getAllEmployees() {
+    return this.httpClient.get<Employee[]>(this.jsonServerUrl, headerOption).subscribe(
+      (data: Employee[]) => {
+        this.allEmployee = data;
+        console.table(this.allEmployee);
+      });
   }
 
   deleteEmployee(id: number): Observable<Employee> {

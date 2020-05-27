@@ -9,10 +9,10 @@ import {Employee} from '../../core/models/Employee.model';
 })
 export class EmployeesListComponent implements OnInit {
 
-  allEmployee: Employee[];
+  // allEmployee: Employee[]; // moved to  employee.service
   msg: any;
 
-  constructor(private employeeService: EmployeeService) {
+  constructor(public employeeService: EmployeeService) {
   }
 
   ngOnInit(): void {
@@ -20,10 +20,12 @@ export class EmployeesListComponent implements OnInit {
   }
 
   getAllEmployee() {
-    this.employeeService.getAllEmployees().subscribe(
+    this.employeeService.getAllEmployees();
+      /*.subscribe(    // moved all this to the employee.service
       (data: Employee[]) => {
         this.allEmployee = data;
-      });
+        console.table(this.allEmployee);
+      });*/
   }
 
   deleteEmployee(id: number) {

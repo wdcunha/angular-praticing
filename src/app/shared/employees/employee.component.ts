@@ -31,14 +31,24 @@ export class EmployeeComponent implements OnInit {
   }
 
   createEmployee(emp: Employee) {
-    this.employeeService.createEmployee(emp).subscribe();
+    this.employeeService.createEmployee(emp).subscribe(
+      (result: Employee) => {
+        this.employeeService.getAllEmployees();
+        this.clearEmployee();
+      }
+    );
   }
 
   updateEmployee(emp: Employee) {
-    this.employeeService.updateEmployee(emp).subscribe();
+    this.employeeService.updateEmployee(emp).subscribe(
+      (result: Employee) => {
+        this.employeeService.getAllEmployees();
+        this.clearEmployee();
+      }
+    );
   }
 
-  clear() {
+  clearEmployee() {
     this.employeeService.currentEmployee = {
       id: null,
       firstName: '',

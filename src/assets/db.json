@@ -22,7 +22,15 @@
       "lastName": "Better",
       "designation": "No way",
       "contact": "21234",
-      "address": "AnyPlace"
+      "address": "Wherever"
+    },
+    {
+      "id": 4,
+      "firstName": "Super",
+      "lastName": "Man",
+      "designation": "Master of things",
+      "contact": "939003992",
+      "address": "Duno"
     }
   ]
 }

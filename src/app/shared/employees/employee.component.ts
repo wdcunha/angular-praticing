@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {EmployeeService} from '../../core/services/employee.service';
 import {Employee} from '../../core/models/Employee.model';
+import {ToastrService} from 'ngx-toastr';
 
 /**
  * Angular With Malik
@@ -14,7 +15,10 @@ import {Employee} from '../../core/models/Employee.model';
 })
 export class EmployeeComponent implements OnInit {
 
-  constructor(public employeeService: EmployeeService) { }
+  constructor(
+    public employeeService: EmployeeService,
+    public toastrService: ToastrService
+    ) { }
 
   ngOnInit(): void {
   }
@@ -34,6 +38,7 @@ export class EmployeeComponent implements OnInit {
     this.employeeService.createEmployee(emp).subscribe(
       (result: Employee) => {
         this.employeeService.getAllEmployees();
+        this.toastrService.success('Employee created successfully!', 'Employee CRUD');
         this.clearEmployee();
       }
     );
@@ -43,6 +48,7 @@ export class EmployeeComponent implements OnInit {
     this.employeeService.updateEmployee(emp).subscribe(
       (result: Employee) => {
         this.employeeService.getAllEmployees();
+        this.toastrService.info('Employee updated successfully!', 'Employee CRUD');
         this.clearEmployee();
       }
     );

@@ -17,6 +17,9 @@ import {FilhoComponent} from './shared/components/output-input/filho/filho.compo
 import {FormComponent} from './shared/components/form/form.component';
 import {NgbModule, NgbRating} from '@ng-bootstrap/ng-bootstrap';
 import {EmployeeModule} from './modules/employees/employee.module';
+import {ToastrModule} from 'ngx-toastr';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgxSpinnerModule} from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,7 @@ import {EmployeeModule} from './modules/employees/employee.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
@@ -39,7 +43,9 @@ import {EmployeeModule} from './modules/employees/employee.module';
     NgbModule,
     HttpClientModule,
     LazyloadingModule,
-    EmployeeModule
+    EmployeeModule,
+    ToastrModule.forRoot(),
+    NgxSpinnerModule
   ],
   providers: [HttpClient, NgbRating],
   bootstrap: [AppComponent]

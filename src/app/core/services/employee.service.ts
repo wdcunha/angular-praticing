@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Employee} from '../models/Employee.model';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 const headerOption = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -23,13 +24,20 @@ export class EmployeeService {
     address: ''
   };
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(
+    private httpClient: HttpClient,
+    private ngxSpinnerService: NgxSpinnerService
+  ) { }
 
   getAllEmployees() {
+    this.ngxSpinnerService.show()
     return this.httpClient.get<Employee[]>(this.jsonServerUrl, headerOption).subscribe(
       (data: Employee[]) => {
         this.allEmployee = data;
         console.table(this.allEmployee);
+        setTimeout(() => {
+          this.ngxSpinnerService.hide();
+        }, 500);
       });
   }
 

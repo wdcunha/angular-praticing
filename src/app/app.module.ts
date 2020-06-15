@@ -20,6 +20,10 @@ import {EmployeeModule} from './modules/employees/employee.module';
 import {ToastrModule} from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgxSpinnerModule} from 'ngx-spinner';
+import {ModalComponent} from './shared/components/modal/modal.component';
+import {DialogModule} from 'primeng/dialog';
+import {ButtonModule} from 'primeng';
+import {ComponentsService} from './shared/components/components.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,8 @@ import {NgxSpinnerModule} from 'ngx-spinner';
     CrudComponent,
     OutputInputComponent,
     FilhoComponent,
-    FormComponent
+    FormComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -45,9 +50,11 @@ import {NgxSpinnerModule} from 'ngx-spinner';
     LazyloadingModule,
     EmployeeModule,
     ToastrModule.forRoot(),
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    DialogModule,
+    ButtonModule
   ],
-  providers: [HttpClient, NgbRating],
+  providers: [HttpClient, NgbRating, ComponentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

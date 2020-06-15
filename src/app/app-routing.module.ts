@@ -5,7 +5,6 @@ import {SegundoCpComponent} from './shared/components/segundo-cp/segundo-cp.comp
 import {ShowPageComponent} from './shared/components/show-page/show-page.component';
 import {NgIfNgForComponent} from './shared/components/ng-if-ng-for/ng-if-ng-for.component';
 import {CrudComponent} from './shared/components/crud/crud.component';
-import {OutputInputComponent} from './shared/components/output-input/output-input.component';
 import {FormComponent} from './shared/components/form/form.component';
 
 const routes: Routes = [

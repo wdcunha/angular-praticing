@@ -7,13 +7,17 @@ Run `json-server --watch db.json` for start the json server in the folder assets
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14.
 
+## Font-awesome
+
+For icons it was installed font-awesome.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## ngx-toastr
 
-[Toastr](https://github.com/scttcper/ngx-toastr) is a component for showing messages for operations according personal implementation. It was installed ngx-toastr by the command in CLI `npm i ngx-toastr -s` and applied to employee stack to test this functionality that was seen in the tutorial from Angular With Malik, [7 Part 4 Angular6, Json-Server - CRUD](https://www.youtube.com/watch?v=m9TjjOeiiBg&list=PL7Kiip3en_dz5BXCyZa0hMSqJEtQGmBWn&index=4). It is necessary to import it in style.scss to make it available for the whole application, also in the app.modules importing ToastModule, then after add to employee.components.
+[Toastr](https://github.com/scttcper/ngx-toastr) is a component for showing messages for operations according personal implementation. It was installed ngx-toastr by the command in CLI `npm i ngx-toastr -s` and applied to employee stack to test this functionality that was seen in the tutorial from Angular With Malik, [7 Part 4 Angular6, Json-Server - CRUD](https://www.youtube.com/watch?v=m9TjjOeiiBg&list=PL7Kiip3en_dz5BXCyZa0hMSqJEtQGmBWn&index=4). It is necessary to import it in style.scss to make it available for the whole application, also in the app.modules importing ToastModule and BrowserAnimationsModule, then after add to employee.components.
 
 ## ngx-spinner
 

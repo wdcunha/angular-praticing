@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Employee} from '../models/Employee.model';
 import {NgxSpinnerService} from 'ngx-spinner';
+import {ComponentsService} from '../../shared/components/components.service';
 
 const headerOption = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -26,11 +27,13 @@ export class EmployeeService {
 
   constructor(
     private httpClient: HttpClient,
-    private ngxSpinnerService: NgxSpinnerService
-  ) { }
+    private ngxSpinnerService: NgxSpinnerService,
+    private modal: ComponentsService
+  ) {}
 
   getAllEmployees() {
-    this.ngxSpinnerService.show()
+    this.modal.showDialog(true);
+    this.ngxSpinnerService.show();
     return this.httpClient.get<Employee[]>(this.jsonServerUrl, headerOption).subscribe(
       (data: Employee[]) => {
         this.allEmployee = data;
@@ -38,6 +41,9 @@ export class EmployeeService {
         setTimeout(() => {
           this.ngxSpinnerService.hide();
         }, 500);
+        setTimeout(() => {
+          this.modal.showDialog(false);
+        }, 3000);
       });
   }
 

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {EmployeeService} from '../../core/services/employee.service';
 import {Employee} from '../../core/models/Employee.model';
 import {ToastrService} from 'ngx-toastr';
@@ -8,7 +8,7 @@ import {ToastrService} from 'ngx-toastr';
   templateUrl: './employees-list.component.html',
   styleUrls: ['./employees-list.component.scss']
 })
-export class EmployeesListComponent implements OnInit {
+export class EmployeesListComponent implements AfterViewInit {
 
   // allEmployee: Employee[]; // moved to  employee.service
   msg: any;
@@ -19,7 +19,7 @@ export class EmployeesListComponent implements OnInit {
   ) {
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.getAllEmployee();
   }
 
